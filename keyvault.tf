@@ -1,7 +1,7 @@
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "vault" {
-  name                        = "harsha1612"
+  name                        = "bhaskararm"
   location                    = azurerm_resource_group.harsha-rg.location
   resource_group_name         = azurerm_resource_group.harsha-rg.name
   tenant_id                   = data.azurerm_client_config.current.tenant_id
@@ -29,7 +29,7 @@ resource "azurerm_key_vault" "vault" {
 
 resource "azurerm_key_vault_secret" "secret" {
   name         = "vmpassword"
-  value        = "Geethika@143"
+  value        = "Subbu@1119"
   key_vault_id = azurerm_key_vault.vault.id
   depends_on = [ 
     azurerm_key_vault.vault 
