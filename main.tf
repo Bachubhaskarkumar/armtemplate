@@ -2,14 +2,14 @@ locals {
   secret = azurerm_key_vault_secret.secret.value
 }
 
-resource "azurerm_resource_group" "bhaskar-rg" {
-  name     = "bhaskar-rg"
+resource "azurerm_resource_group" "bhaskar-rg1" {
+  name     = "bhaskar-rg1"
   location = "Norway East"
 }
 
 resource "azurerm_resource_group_template_deployment" "bhaskardeploy" {
   name                = "bhaskardeploy"
-  resource_group_name = azurerm_resource_group.bhaskar-rg.name
+  resource_group_name = azurerm_resource_group.bhaskar-rg1.name
   deployment_mode = "Incremental"
   parameters_content = jsonencode({
     "secret" = {
