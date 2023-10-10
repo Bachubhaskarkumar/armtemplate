@@ -1,7 +1,7 @@
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "vault" {
-  name                        = "bhaskararm"
+  name                        = "bhaskararm1"
   location                    = azurerm_resource_group.bhaskar-rg1.location
   resource_group_name         = azurerm_resource_group.bhaskar-rg1.name
   tenant_id                   = data.azurerm_client_config.current.tenant_id
