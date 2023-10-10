@@ -4,7 +4,7 @@ locals {
 
 resource "azurerm_resource_group" "bhaskar-rg" {
   name     = "bhaskar-rg"
-  location = "EAST US"
+  location = "Norway East"
 }
 
 resource "azurerm_resource_group_template_deployment" "bhaskardeploy" {
